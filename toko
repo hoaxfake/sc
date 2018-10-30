@@ -1,0 +1,78 @@
+#include <iostream.h>
+#include <conio.h>
+#include <stdio.h>
+main()
+{
+
+  char kdsls[20],kdbrng[20],nmsls[20],kdbrg[20],nmbrg[20];
+  long int pnjln,gjh,hg,bns,hsl,tgjh;
+
+ cout<<"                TOKO JAYA ABADI\n";
+ cout<<"       Jl. Tanah Kusir No.5 Jakarta Selatan\n";
+ cout<<"=====================================================\n";
+ cout<<"Masukan Kode Sales  : ";cin>>kdsls;
+ cout<<"Masukan Kode Barang : ";cin>>kdbrng;
+ cout<<"Jumlah Penjualan    : ";cin>>pnjln;
+ cout<<"=====================================================\n";
+
+  if(strcmp(kdsls,"pij")==0 || strcmp (kdsls,"PIJ")==0)
+  {
+  strcpy(nmsls,"Paijo");
+  gjh=700000;
+  }
+  if(strcmp(kdsls,"jki")==0 || strcmp (kdsls,"JKI")==0)
+  {
+  strcpy(nmsls,"Juki");
+  gjh=800000;
+  }
+  if(strcmp(kdsls,"krn")==0 || strcmp (kdsls,"KRN")==0)
+  {
+  strcpy(nmsls,"Kirun");
+  gjh=900000;
+  }
+
+
+  if(strcmp(kdbrg,"kmp")==0 || strcmp (kdsls,"KMP")==0)
+  {
+  strcpy(nmbrg,"Komputer");
+  hg=5000000;
+  }
+  if(strcmp(kdbrg,"pni")==0 || strcmp (kdsls,"PNI")==0)
+  {
+  strcpy(nmbrg,"Printer");
+  hg=350000;
+  }
+  if(strcmp(kdbrg,"kyb")==0 || strcmp (kdsls,"KYB")==0)
+  {
+  strcpy(nmbrg,"Keyboard");
+  hg=200000;
+  }
+
+  if (pnjln>=10)
+  {
+  bns=200000*(pnjln-10);
+  }
+  else
+  {
+  bns=0;
+  }
+
+   hsl=hg*pnjln;
+   tgjh=gjh+bns;
+
+
+ cout<<"             LAPORAN PENJUALAN BARANG\n";
+ cout<<"                TOKO JAYA ABADI\n";
+ cout<<"       Jl. Tanah Kusir No.5 Jakarta Selatan\n";
+ cout<<"=====================================================\n";
+ cout<<"Nama Sales       : "<<nmsls;
+ cout<<"\nGaji Pokok       : "<<gjh;
+ cout<<"\nNama Barang      : "<<kdbrg;
+ cout<<"\nHarga Satuan     :Rp. "<<hg;
+ cout<<"\nJumlah Penjualan : "<<pnjln<<" Unit";
+ cout<<"\nTotal Penjualan  :Rp. "<<hsl;
+ cout<<"\nBonus            :Rp. "<<bns;
+ cout<<"\nTotal Gajih      :Rp. "<<tgjh;
+
+getch();
+}
